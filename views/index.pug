@@ -1,5 +1,27 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	.header
+		h1 CONTACT ME
+		h1 MESSAGE: #{message}
+	.container
+		form(method="post", action="/send")
+			.form-group
+				label Name
+				input(class="form-control", name="name")
+			.form-group
+				label Email Address
+				input(class="form-control", name="email")
+			.form-group
+				label Phone
+				input(class="form-control", name="phone")
+			.form-group
+				label Message
+				textarea(class="form-control", rows="3", name="content")
+			button(type="submit", class="btn btn-primary") Submit
+
+
+
+
+
+
