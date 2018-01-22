@@ -55,8 +55,7 @@ router.post('/send', (req, res) => {
             console.log(err);
             res.redirect('/?msg=fail');
         } else {
-            console.log('SUCCESSSSSSSSSS!');
-            res.redirect('/?msg=SUCCESSSSSSSSSS');
+            res.redirect('/?msg=email-sent');
         }
     });
 });
